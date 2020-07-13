@@ -1,7 +1,7 @@
 import processing.serial.*;
 
 Serial port;
-String brightness = "00";
+String distance = "00";
 
 void setup() {
   size(400,250);
@@ -22,5 +22,5 @@ void draw() {
 
 void serialEvent (Serial port)
 {
-  brightness = port.readStringUntil('\n');
+  distance = port.readStringUntil('\n');
 }
